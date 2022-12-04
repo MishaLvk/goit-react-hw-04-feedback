@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Feedback/Feedback.css';
 import PropTypes from 'prop-types';
 import { FeedbackStatistics } from './Statistics.styled';
 

@@ -3,7 +3,6 @@ import Statistics from '../Statistics/Statistics';
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Notification from '../Notification/Notification';
 import { Wrapper } from './feedback.styled';
-import './Feedback.css';
 
 export default function Feedback() {
   const [good, setGood] = useState(0);
