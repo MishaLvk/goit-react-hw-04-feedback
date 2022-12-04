@@ -1,9 +1,10 @@
 import React from 'react';
-import './Feedback.css';
+import '../Feedback/Feedback.css';
 import PropTypes from 'prop-types';
+import { FeedbackStatistics } from './Statistics.styled';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div className="Feedback_statistics">
+  <FeedbackStatistics className="Feedback_statistics">
     <span className="Statistic_value">Good: {good}</span>
     <span className="Statistic_value">Neutral: {neutral}</span>
     <span className="Statistic_value">Bad: {bad}</span>
@@ -11,7 +12,7 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <span className="Statistic_value">
       Positive feedback: {positivePercentage}%
     </span>
-  </div>
+  </FeedbackStatistics>
 );
 
 export default Statistics;

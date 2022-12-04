@@ -1,7 +1,8 @@
 import { useState, useMemo } from 'react';
-import Statistics from './Statistics';
-import FeedbackOptions from './FeedbackOptions';
-import Notification from './Notification';
+import Statistics from '../Statistics/Statistics';
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
+import Notification from '../Notification/Notification';
+import { Wrapper } from './feedback.styled';
 import './Feedback.css';
 
 export default function Feedback() {
@@ -34,7 +35,7 @@ export default function Feedback() {
   }, [good, CountTotalFeedback]);
 
   return (
-    <section title="Feedback" className="Feedback_container">
+    <Wrapper title="Feedback">
       <h1>Please leave feedback</h1>
 
       <FeedbackOptions
@@ -53,7 +54,7 @@ export default function Feedback() {
       ) : (
         <Notification message="There is no feedback" />
       )}
-    </section>
+    </Wrapper>
   );
 }
 

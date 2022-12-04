@@ -1,20 +1,23 @@
 import React from 'react';
-import './Feedback.css';
+import '../Feedback/Feedback.css';
 import PropTypes from 'prop-types';
+import {
+  FeedbackControlsBtn,
+  FeedbackControls,
+} from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
-  <div className="Feedback_controls">
+  <FeedbackControls>
     {options.map(btn => (
-      <button
-        className="Feedback_controls_btn"
+      <FeedbackControlsBtn
         key={btn}
         type="button"
         onClick={() => onLeaveFeedback(btn)}
       >
         {btn}
-      </button>
+      </FeedbackControlsBtn>
     ))}
-  </div>
+  </FeedbackControls>
 );
 
 export default FeedbackOptions;
